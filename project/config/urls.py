@@ -23,6 +23,8 @@ urlpatterns = [
     
 ]
 urlpatterns += [
-    path("", include("cliente.urls")),
-    path("productos/", include("productos.urls"))
+    path("", include("home.urls")),
+    path("cliente/", include("cliente.urls")),
+    path("productos/", include("productos.urls")),
+    
 ]
