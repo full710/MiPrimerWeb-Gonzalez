@@ -7,3 +7,9 @@ class Pais(models.Model):
     
     def __str__(self) -> str:
         return self.nombre
+
+class Cliente(models.Model):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    nacimiento = models.DateField(null=True)
+    pais_origen_id = models.ForeignKey(Pais, on_delete=models.SET_NULL,null=True,blank=True)
