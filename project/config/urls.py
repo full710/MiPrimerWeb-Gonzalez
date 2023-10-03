@@ -20,8 +20,9 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("titulo/", views.Tituto)
+    
 ]
 urlpatterns += [
-    path("", include("cliente.urls"))
+    path("", include("cliente.urls")),
+    path("productos/", include("productos.urls"))
 ]
