@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>El Duende Carpintero</h1>
-    <h2>{{ nombre }}</h2>
+{% extends 'home/base.html' %}
+
+{% block title %}
+    <h1>El dunde Carpintero </h1>
+{% endblock title %}
+    
+{% block content %}   
+    
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{cliente.nombre}}</li>
+            <li>{{cliente.apellido}}</li>
+        {% endfor %}    
+    </ul>
+    
+    <p>{{ cliente.nombre }}</p>
     <button><a href="{% url 'home:index' %}">Volver menu</a></button>
-</body>
-</html>
+{% endblock content %}
+    

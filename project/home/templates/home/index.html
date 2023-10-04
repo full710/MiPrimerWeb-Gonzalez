@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nueva pagina</title>
-</head>
-<body>
+{% extends 'home/base.html' %}
+
+{% block title %}
     <h1>Prueba Coderhause</h1>
+{% endblock title %}
+
+{% block content %}
     <p><a href="{% url 'cliente:index' %}">Clientes</a></p>
-    <p><a href="">Productos</a></p>
-</body>
-</html>
+    <p><a href="{% url 'productos:index' %}">Productos</a></p>
+{% endblock content %}
+    
