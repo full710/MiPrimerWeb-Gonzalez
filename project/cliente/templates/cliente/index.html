@@ -4,16 +4,15 @@
     <h1>El dunde Carpintero </h1>
 {% endblock title %}
     
-{% block content %}   
-    
+{% block content %}       
     <ul>
         {% for cliente in clientes %}
-            <li>{{cliente.nombre}}</li>
-            <li>{{cliente.apellido}}</li>
+            <li>{{ cliente.nombre|capfirst }} {{ cliente.apellido|capfirst }}</li>
+            
         {% endfor %}    
     </ul>
-    
-    <p>{{ cliente.nombre }}</p>
-    <button><a href="{% url 'home:index' %}">Volver menu</a></button>
-{% endblock content %}
+<p><a href="{% url 'cliente:crear' %}">Crear cliente</a></p>
+<p><a href="{% url 'home:index' %}">Volver menu</a></p>
+
+{% endblock %}
     
