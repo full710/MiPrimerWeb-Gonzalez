@@ -1,0 +1,14 @@
+{% extends 'home/base.html' %}
+
+
+    
+{% block content %}       
+    <ul>
+        {% for destinos in destinos %}
+            <li>{{ destinos.nombre }}</li>
+            
+        {% endfor %}    
+    </ul>
+
+
+{% endblock %}
