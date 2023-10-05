@@ -1,11 +1,15 @@
 {% extends 'home/base.html' %}
-{% block title %}
-    <h1>Productos</h1>
-{% endblock title %}
- {% block content %}
-    <h2>{{ nombre }}</h2>
-    <h2>Esto es una prueba aca van mostrado los productos</h2>
-    <button><a href="{% url 'home:index' %}">Volver Menu</a></button>
 
- {% endblock content %}   
+
+    
+{% block content %}       
+    <ul>
+        {% for productos in productos %}
+            <li>{{ productos.nombre_producto }}: ${{ productos.precio_producto }}</li>
+            
+        {% endfor %}    
+    </ul>
+
+
+{% endblock %}
     
