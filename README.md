@@ -8,6 +8,8 @@ Ingresar a productos mostrara una lista de los productos con sus respectivos pre
 
 Ingresar a envios/destino, se mostrara una lista de destinos donde se pueden realiar envios y agregar nuevos destinos
 
+# Pagina creada por Juan Gonzalez 
+
 
 
 
